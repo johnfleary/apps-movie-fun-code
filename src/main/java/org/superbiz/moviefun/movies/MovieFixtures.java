@@ -28,6 +28,6 @@ public class MovieFixtures {
     }
 
     public List<Movie> load() {
-        return readFromCsv(objectReader, "movie-fixtures.csv");
+        return readFromCsv(objectReader, this.getClass().getClassLoader().getResourceAsStream("movie-fixtures.csv"));
     }
 }

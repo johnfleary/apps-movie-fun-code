@@ -27,6 +27,6 @@ public class AlbumFixtures {
     }
 
     public List<Album> load() {
-        return readFromCsv(objectReader, "album-fixtures.csv");
+        return readFromCsv(objectReader, this.getClass().getClassLoader().getResourceAsStream("album-fixtures.csv"));
     }
 }
